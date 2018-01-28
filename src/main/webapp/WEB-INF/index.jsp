@@ -11,10 +11,15 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Index</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">	
-		<script src="/js/main.js"></script>
 	</head>
 
 	<body>
-		<h1>To Be Expanded</h1>
+		<h1>
+			Stephen Irving's Fantastic Java Portfolio
+		</h1>
+		<sub>Okay maybe 'fantastic' is a bit too strong a word</sub>
+		<h1>But anyway</h1>
+
+		<p><a href="/overflow">OverFlow</a> - A platform where users can anonymously ask and answer questions. Built in Spring.</p>
 	</body>
 </html>
