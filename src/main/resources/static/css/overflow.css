@@ -1,21 +1,7 @@
-* {
-    font-size: 105%;
-    font-family: "Roboto", sans-serif;
-}
 .wrapper {
     width: 65%;
     margin-right: auto;
     margin-left: auto;
-}
-h1, h2{
-    font-family: "Poiret One", cursive;
-    text-align: center;
-}
-h1 {
-    font-size: 300%;
-}
-h2 {
-    font-size: 200%;
 }
 table {
     border-collapse: collapse;
@@ -39,9 +25,4 @@ button {
 }
 .error {
     color: red;
-}
-.quicknav {
-    position: absolute;
-    top: 0;
-    right: 0;
 }

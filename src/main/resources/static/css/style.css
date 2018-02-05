@@ -1,0 +1,25 @@
+*{
+    font-size: 105%;
+    font-family: "Roboto", sans-serif;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+h1, h2 {
+    font-family: "Poiret One", cursive;
+    text-align: center;
+}
+h1 {
+    font-size: 300%;
+}
+h2 {
+    font-size: 200%;
+}
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

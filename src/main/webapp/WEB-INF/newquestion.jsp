@@ -11,7 +11,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>New Question</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto|Poiret+One" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/css/overflow.css">
+		<link href="/css/style.css" rel="stylesheet" >
+		<link href="/css/overflow.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -32,7 +33,7 @@
 				<input type="text" name="tag"/><br><br>
 				<input type="submit" value="Submit">
 			</form>
-			<form class="quicknav" action="/overflow" method="GET">
+			<form class="exit" action="/overflow" method="GET">
 				<input type="submit" value="Return">
 			</form>
 		</div>

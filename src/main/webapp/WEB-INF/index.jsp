@@ -10,16 +10,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Index</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">	
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Poiret+One" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet" >
 	</head>
 
 	<body>
-		<h1>
-			Stephen Irving's Fantastic Java Portfolio
-		</h1>
-		<sub>Okay maybe 'fantastic' is a bit too strong a word</sub>
-		<h1>But anyway</h1>
-
+		<h1>Stephen Irving's Java Portfolio</h1>
 		<p><a href="/overflow">OverFlow</a> - A platform where users can anonymously ask and answer questions. Built in Spring.</p>
+		<p><a href="/scriptions">Scriptions</a> - A platfrom where users can subscribe to 'packages' created by 
+			administrators. Administrators can create, delete, and activate packages. Built in Spring. 
+			User registration and validation through Spring Security.</p>
 	</body>
 </html>

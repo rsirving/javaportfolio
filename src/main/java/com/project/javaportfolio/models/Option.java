@@ -3,7 +3,6 @@ package com.project.javaportfolio.models;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Table;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,8 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.Table;
 import javax.persistence.Transient;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
@@ -23,14 +22,22 @@ import org.hibernate.validator.constraints.Email;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="questions")
-public class Question{
+@Table(name="options")
+public class Option{
 	@Id
 	@GeneratedValue
 	private long id;
 
-	@NotNull
-	private String body;
+	private String name;
+
+	private float cost;
+	
+	private boolean active;
+	
+	@OneToMany(mappedBy="option", fetch=FetchType.LAZY)
+	private List<User> users;
+	
+	// Member variables and annotations go here.
 	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
@@ -42,17 +49,6 @@ public class Question{
 	public void onCreate(){this.createdAt = new Date();}
 	@PreUpdate
 	public void onUpdate(){this.updatedAt = new Date();}
-
-	@OneToMany(mappedBy="question", fetch = FetchType.LAZY)
-	private List<Answer> answers;
-	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(
-		name="questions_tags",
-		joinColumns = @JoinColumn(name="question_id"),
-		inverseJoinColumns = @JoinColumn(name="tag_id")
-	)
-	private List<Tag> tags;
 	
 	public long getId() {
 		return id;
@@ -74,30 +70,32 @@ public class Question{
 	}
 	
 	// Setters and Getters
-	public Question(){}
-	
-	public Question(String body, List<Tag> tags){
-		this.body = body;
-		this.tags = tags;
+	public Option(){
 		this.createdAt = new Date();
 		this.updatedAt = new Date();
 	}
-	public String getBody() {
-		return body;
+	public String getName() {
+		return name;
 	}
-	public void setBody(String body) {
-		this.body = body;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public List<Answer> getAnswers(){
-		return answers;
+	public float getCost() {
+		return cost;
 	}
-	public void setAnswers(List<Answer> answers){
-		this.answers = answers;
+	public void setCost(float cost) {
+		this.cost = cost;
 	}
-	public List<Tag> getTags(){
-		return tags;
+	public List<User> getUsers(){
+		return users;
 	}
-	public void setTags(List<Tag> tags){
-		this.tags = tags;
+	public void setUsers(List<User> users){
+		this.users = users;
+	}
+	public boolean isActive() {
+		return active;
+	}
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 }

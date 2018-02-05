@@ -32,8 +32,6 @@ public class Tag{
 	@NotNull
 	private String name;
 
-	// Member variables and annotations go here.
-	
 	@DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
 	private Date createdAt;
 	
@@ -72,8 +70,7 @@ public class Tag{
 		this.updatedAt = updatedAt;
 	}
 	
-	// Setters and Getters go here
-
+	// Setters and Getters
 	public Tag(){}
 	
 	public Tag(String name){

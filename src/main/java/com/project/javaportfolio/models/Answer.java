@@ -66,6 +66,7 @@ public class Answer{
 		this.updatedAt = updatedAt;
 	}
 	
+	// Setters and Getters
 	public Answer(){}
 	
 	public Answer(String body, Question question){

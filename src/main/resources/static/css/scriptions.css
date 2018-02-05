@@ -1,0 +1,39 @@
+.flexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.entrBlock {
+    width: 45%;
+    vertical-align: top;
+    background-color: rgb(250,250,250);
+    border-radius: 20px;
+    padding: 1%;
+}
+.adminBlock {
+    width: 30%;
+    vertical-align: top;
+    background-color: rgb(250,250,250);
+    border-radius: 20px;
+    padding: .5%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+form p {
+    display: flex;
+    justify-content: space-between;
+}
+label, input {
+    display: inline-block;
+    vertical-align: baseline;
+}
+td, th {
+    text-align: right;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 10px 0;
+}
