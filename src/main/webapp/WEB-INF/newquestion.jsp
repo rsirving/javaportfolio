@@ -20,6 +20,7 @@
 			<h1>OverFlow</h1>
 			<h2>What is your question?</h2>
 			<form method="POST" action="/overflow/questions/new/submit">
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				<p class="error">${errors0}</p>
 				<label name="body">Question:</label>
 				<br>

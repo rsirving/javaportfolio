@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -94,6 +95,7 @@
 				<h2>New Package</h2>
 				<p class="error"><c:out value="${optionFlash}"/></p>
 				<form:form method="POST" action="/scriptions/packages/new" modelAttribute="option">
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					<form:label path="name">Package Name:</form:label>
 					<form:input path="name"/>
 		

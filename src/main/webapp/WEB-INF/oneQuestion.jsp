@@ -28,6 +28,7 @@
 			<br>
 			<div id="answerSection">
 				<form method="post" action="/overflow/answer/new/${question.id}">
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					<label name="body">Add Answer:</label><br>
 					<p class="error">${answerError}</p>
 					<textarea name="body" id="body" cols="30" rows="5"></textarea>
